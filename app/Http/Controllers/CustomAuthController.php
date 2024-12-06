@@ -136,6 +136,7 @@ class CustomAuthController extends Controller
     */
     public function changePasswordUpdate(Request $request)
     {
+    
         $request->validate([
             'password' => 'required|min:6|confirmed',
         ]);
