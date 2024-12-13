@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\User;
-use App\Models\Cliente;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
@@ -24,10 +23,11 @@ class UserController extends Controller
     * @return
     *
     */
-    public function index(){
-        session(['modulo'=>'catalogos']);
+    public function index()
+    {
+        session(['modulo' => 'catalogos']);
         $usuarios = User::orderBy('name')->paginate(config('constantes.itemsPorPagina'));
-        return view('usuarios.index')->with('usuarios',$usuarios);
+        return view('usuarios.index')->with('usuarios', $usuarios);
     }
 
     /*
@@ -40,8 +40,7 @@ class UserController extends Controller
     */
     public function create()
     {
-        $clientes=Cliente::all();
-        return view('usuarios.create',compact('clientes'));
+        return view('usuarios.create');
     }
 
     /*
@@ -54,14 +53,23 @@ class UserController extends Controller
     */
     public function store(UserRequest $request)
     {
-        
+
         $password = Str::random(8);
         $usuario = new User();
         $usuario->name = $request->name;
         $usuario->perfil = $request->perfil;
         $usuario->email = $request->email;
+        $usuario->telefono = $request->telefono;
         $usuario->status = $request->status;
-        $usuario->cliente_id = $request->cliente_id ?? NULL;
+        if ($request->hasFile('foto')) {
+            $extension = $request->foto->extension();
+            $dir = "public/perfil/";
+            $nombre_archivo = date('YmdHis') . "." . $extension;
+            $request->foto->storeAs($dir, $nombre_archivo);
+            $nombre_archivo = $dir . $nombre_archivo;
+            $nombre_archivo = str_replace("public/", "storage/", $nombre_archivo);
+            $usuario->foto = $nombre_archivo;
+        }
         $usuario->password = Hash::make($password);
         $usuario->save();
 
@@ -72,7 +80,7 @@ class UserController extends Controller
         $datos->email = $request->email;
         Mail::to($request->email)->send(new NuevoUsuario($datos));
 
-        return redirect()->route('usuarios.index')->with('success','El usuario ha sido creado');
+        return redirect()->route('usuarios.index')->with('success', 'El usuario ha sido creado');
     }
 
     /*
@@ -88,7 +96,7 @@ class UserController extends Controller
         $usuario = User::findOrFail($id);
         $usuario->delete();
         return redirect()->route('usuarios.index')
-                ->with('success','El usuario ha sido eliminado');
+            ->with('success', 'El usuario ha sido eliminado');
     }
 
     /*
@@ -102,8 +110,7 @@ class UserController extends Controller
     public function edit($id)
     {
         $usuario = User::findOrFail($id);
-        $clientes=Cliente::all();
-        return view('usuarios.edit',compact('clientes'))->with('usuario',$usuario);
+        return view('usuarios.edit')->with('usuario', $usuario);
     }
 
     /*
@@ -117,18 +124,23 @@ class UserController extends Controller
     public function update(UserRequest $request, $id)
     {
         $usuario = User::findOrFail($id);
-        if($request->perfil == '1'){
-            $request->cliente_id=NULL; 
-        }
-        
         $usuario->name = $request->name;
         $usuario->perfil = $request->perfil;
         $usuario->email = $request->email;
         $usuario->status = $request->status;
-        $usuario->cliente_id = $request->cliente_id;
+        $usuario->telefono = $request->telefono;
+        if ($request->hasFile('foto')) {
+            $extension = $request->foto->extension();
+            $dir = "public/perfil/";
+            $nombre_archivo = date('YmdHis') . "." . $extension;
+            $request->foto->storeAs($dir, $nombre_archivo);
+            $nombre_archivo = $dir . $nombre_archivo;
+            $nombre_archivo = str_replace("public/", "storage/", $nombre_archivo);
+            $usuario->foto = $nombre_archivo;
+        }
         $usuario->save();
-        
-        return redirect()->route('usuarios.index')->with('success','El usuario ha sido actualizado');
+
+        return redirect()->route('usuarios.index')->with('success', 'El usuario ha sido actualizado');
     }
 
     /*
@@ -141,15 +153,15 @@ class UserController extends Controller
     */
     public function cambiaPwd(Request $request)
     {
-        if(strlen($request->password)<6){
-            return back()->with('error','El password debe tener al menos 6 caracteres');
+        if (strlen($request->password) < 6) {
+            return back()->with('error', 'El password debe tener al menos 6 caracteres');
         }
-        if($request->password!=$request->password_confirmation){
-            return back()->with('error','El password y su confirmación no coinciden, intenta de nuevo.');
+        if ($request->password != $request->password_confirmation) {
+            return back()->with('error', 'El password y su confirmación no coinciden, intenta de nuevo.');
         }
         $usuario = User::findOrFail($request->user_id);
         $usuario->password = bcrypt($request->password);
         $usuario->save();
-        return redirect()->route('usuarios.index')->with('success','El password del usuario ha sido actualizado');
+        return redirect()->route('usuarios.index')->with('success', 'El password del usuario ha sido actualizado');
     }
 }

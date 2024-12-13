@@ -22,7 +22,8 @@ class User extends Authenticatable
         'email',
         'password',
         'status',
-        'cliente_id',
+        'foto',
+        'telefono',
         'perfil'
     ];
 
@@ -44,17 +45,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-     /*
-    *
-    * @brief
-    * @author Jorge Ibarra
-    * @param string
-    * @return
-    *
-    */
-    public function cliente()
-    {
-        return $this->hasOne(Cliente::class, 'id','cliente_id');
-    }
 }

@@ -1,102 +1,196 @@
 @extends('layouts.mainlayout')
+
 @section('breadcrumb')
-    <div class="col-4 col-xl-4 page-title">
-        <h4 class="f-w-700">Usuarios</h4>
-        <nav>
-            <ol class="breadcrumb justify-content-sm-start align-items-center mb-0">
-                <li class="breadcrumb-item"><a href="/usuarios"> <i data-feather="users"> </i></a></li>
-                <li class="breadcrumb-item f-w-400">Usuarios</li>
-                <li class="breadcrumb-item f-w-400 active">Editar Usuario</li>
-            </ol>
-        </nav>
-    </div>
+<!--begin::Page title-->
+<div class="page-title d-flex flex-column align-items-start me-3 py-2 py-lg-0 gap-2">
+    <!--begin::Title-->
+    <h1 class="d-flex text-gray-900 fw-bold m-0 fs-3">Usuarios
+        <!--begin::Separator-->
+        <span class="h-20px border-gray-500 border-start mx-3"></span>
+        <!--end::Separator-->
+        <!--begin::Description-->
+        <small class="text-gray-500 fs-7 fw-semibold my-1">Editar</small>
+        <!--end::Description-->
+    </h1>
+    <!--end::Title-->
+</div>
+<!--end::Page title-->
 @endsection
 @section('contenido')
-    @php $perfiles= config('constantes.perfiles'); @endphp
+<div class="content flex-row-fluid" id="kt_content">
+    <!--begin::Card-->
     <div class="card">
+        <!--begin::Card header-->
         <div class="card-header">
-            <h4>Editar usuario</h4>
+            <!--begin::Card title-->
+            <div class="card-title fs-3 fw-bold">Editar Usuario</div>
+            <!--end::Card title-->
         </div>
-        <div class="card-body">
-            <form id="frmDatos" class="form fv-plugins-bootstrap5 fv-plugins-framework" method="post"
-                action="{{ route('usuarios.update', $usuario->id) }}">
-                @csrf
-                @method('PUT')
-                <div class="row">
-                    <div class="col-lg-6 col-sm-6 col-12 mt-2">
-                        <div class="form-group">
-                            <label class="form-label">Nombre <span class="manitory">*</span></label>
-                            <input type="text" class="form-control" name="name" id="name" value="{{ old('name', $usuario->name) }}">
-                        </div>
+        <!--end::Card header-->
+        <!--begin::Form-->
+        <form id="kt_project_settings_form" class="form" method="post" enctype="multipart/form-data"
+        action="{{ route('usuarios.update', $usuario->id) }}">
+            @csrf
+            @method('PUT')
+            <!--begin::Card body-->
+            <div class="card-body p-9">
+                <!--begin::Row-->
+                <div class="row mb-5">
+                    <!--begin::Col-->
+                    <div class="col-xl-3">
+                        <div class="fs-6 fw-semibold mt-2 mb-3">Foto</div>
                     </div>
-                    <div class="col-lg-6 col-sm-6 col-12 mt-2">
-                        <div class="form-group">
-                            <label class="form-label">Email <span class="manitory">*</span></label>
-                            <input type="text" name="email" id="email" class="form-control" value="{{ old('email', $usuario->email) }}">
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Image input-->
+                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('assets/media/svg/avatars/blank.svg')">
+                            <!--begin::Preview existing avatar-->
+                            <div class="image-input-wrapper w-125px h-125px bgi-position-center" style="background-size: 75%; background-image: url('/{{$usuario->foto}}')"></div>
+                            <!--end::Preview existing avatar-->
+                            <!--begin::Label-->
+                            <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+                                <i class="ki-duotone ki-pencil fs-7">
+                                    <span class="path1"></span>
+                                    <span class="path2"></span>
+                                </i>
+                                <!--begin::Inputs-->
+                                <input type="file" name="foto" accept=".png, .jpg, .jpeg" />
+                                <input type="hidden" name="avatar_remove" />
+                                <!--end::Inputs-->
+                            </label>
+                            <!--end::Label-->
+                            <!--begin::Cancel-->
+                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+                                <i class="ki-duotone ki-cross fs-2">
+                                    <span class="path1"></span>
+                                    <span class="path2"></span>
+                                </i>
+                            </span>
+                            <!--end::Cancel-->
+                            <!--begin::Remove-->
+                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                                <i class="ki-duotone ki-cross fs-2">
+                                    <span class="path1"></span>
+                                    <span class="path2"></span>
+                                </i>
+                            </span>
+                            <!--end::Remove-->
                         </div>
+                        <!--end::Image input-->
+                        <!--begin::Hint-->
+                        <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                        <!--end::Hint-->
                     </div>
-                    <div class="col-lg-3 col-sm-6 col-12 mt-2">
-                        <div class="form-group">
-                            <label class="form-label">Perfil</label>
-
-                            <select class="select2" name="perfil" id="perfil" onchange="mostrarCliente(this)">
-                                @foreach ($perfiles as $key => $perfil)
-                                    <option value="{{ $key }}" @selected(old('perfil', $usuario->perfil) == $key)> {{ $perfil }}
-                                    </option>
-                                @endforeach
-
-                            </select>
-                        </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Row-->
+                <!--begin::Row-->
+                <div class="row mb-8">
+                    <!--begin::Col-->
+                    <div class="col-xl-3">
+                        <label class="required fw-semibold fs-6 mb-3">Nombre</label>
                     </div>
-                    <div class="col-lg-3 col-sm-6 col-12 mb-3 mt-2" id="divClientes" style="display: {{$usuario->perfil != 1 ? 'block' : 'none'}};">
-                        <div class="form-group">
-                            <label class="form-label">Cliente</label>
-                            <select  class="select2" name="cliente_id" id="cliente" >
-                                <option value="">Selecciona un cliente</option>
-                               @foreach($clientes as $cliente)
-                                    <option value="{{$cliente->id}}"  @selected($usuario->cliente_id == $cliente->id)>{{$cliente->empresa}}</option>
-                               @endforeach
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-12 mt-2">
-                        <div class="form-group">
-                            <label class="form-label">Status</label>
-                            <select class="select2" name="status" id="status">
-                                <option value="0" @selected(old('status', $usuario->status) == 0)>Inactivo</option>
-                                <option value="1" @selected(old('status', $usuario->status) == 1)>Activo</option>
-                            </select>
-                        </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-xl-9 fv-row">
+                        <input type="text" class="form-control form-control-solid" name="name" value="{{ old('name',$usuario->name) }}" />
                     </div>
                 </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-12 d-flex justify-content-between align-items-left">
-                        <a href="{{ route('usuarios.index') }}" class="btn btn-danger">
-                            <i class="fa-duotone fa-times m-1"></i>Cancelar
-                        </a>
-                        <button type="submit" class="btn  me-2 btn-success">
-                            <i class="fa-duotone fa-check m-1"></i> Aceptar
-                        </button>
+                <!--end::Row-->
+                <!--begin::Row-->
+                <div class="row mb-8">
+                    <!--begin::Col-->
+                    <div class="col-xl-3">
+                        <label class="required fw-semibold fs-6 mb-3">Email</label>
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-xl-9 fv-row">
+                        <input type="text" class="form-control form-control-solid" name="email" value="{{ old('email',$usuario->email) }}" />
                     </div>
                 </div>
-            </form>
-        </div>
+                <!--end::Row-->
+                <!--begin::Row-->
+                <div class="row mb-8">
+                    <!--begin::Col-->
+                    <div class="col-xl-3">
+                        <label class="required fw-semibold fs-6 mb-3">Telefono</label>
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-xl-9 fv-row">
+                        <input type="text" class="form-control form-control-solid" name="telefono" value="{{ old('telefono',$usuario->telefono) }}" />
+                    </div>
+                    <!--begin::Col-->
+                </div>
+                <!--end::Row-->
+                <!--begin::Row-->
+                <div class="row mb-8">
+                    <!--begin::Col-->
+                    <div class="col-xl-3">
+                        <label class="required fw-semibold fs-6 mb-3">Estatus</label>
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-xl-9 fv-row">
+                        <select class="form-select form-select-solid fw-bold" name="status" data-kt-select2="true" data-placeholder="Seleccionar opcion" data-allow-clear="true" data-kt-user-table-filter="role" data-hide-search="true">
+                            <option value="1" {{$usuario->status==1 ? 'active' : ''}}>Activo</option>
+                            <option value="0" {{$usuario->status==0 ? 'active' : ''}}>Inactivo</option>
+                        </select>
+                    </div>
+                    <!--begin::Col-->
+                </div>
+                <!--end::Row-->
+                <!--begin::Row-->
+                <div class="row mb-8">
+                    <!--begin::Col-->
+                    <div class="col-xl-3">
+                        <div class="fs-6 fw-semibold mt-2 mb-3">Perfl</div>
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-xl-9">
+
+                        @foreach(config('constantes.perfiles') as $key => $perfil)
+                        <!--begin::Input row-->
+                        <div class="d-flex fv-row">
+                            <!--begin::Radio-->
+                            <div class="form-check form-check-custom form-check-solid">
+                                <!--begin::Input-->
+                                <input class="form-check-input me-3" name="perfil" type="radio" value="{{$key}}" id="kt_modal_update_role_option_0" {{$usuario->perfil == $key ? 'checked' : ''}} />
+                                <!--end::Input-->
+                                <!--begin::Label-->
+                                <label class="form-check-label" for="kt_modal_update_role_option_0">
+                                    <div class="fw-bold text-gray-800">{{$perfil}}</div>
+                                </label>
+                                <!--end::Label-->
+                            </div>
+                            <!--end::Radio-->
+                        </div>
+                        <!--end::Input row-->
+                        <div class='separator separator-dashed my-5'></div>
+
+                        @endforeach
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Row-->
+
+            </div>
+            <!--end::Card body-->
+            <!--begin::Card footer-->
+            <div class="card-footer d-flex justify-content-end py-6 px-9">
+                <button type="reset" class="btn btn-light btn-active-light-primary me-2">Cancelar</button>
+                <button type="submit" class="btn btn-primary" id="kt_project_settings_submit">Guardar</button>
+            </div>
+            <!--end::Card footer-->
+        </form>
+        <!--end:Form-->
     </div>
+    <!--end::Card-->
+</div>
 @endsection
-<!-- /add -->
 @section('scripts')
-        <script>
-            function mostrarCliente(el){
-                let perfil=el.value;
-                $('#divClientes').hide();
-
-                $('#cliente').attr('required',false);
-                if(perfil != 1){
-                    $('#divClientes').show();
-                    $('#cliente').attr('required',true);
-                }
-            }   
-
-        </script>
-    @endsection
+<script src="{{asset('js/usuarios/acciones.js')}}"></script>
+@endsection

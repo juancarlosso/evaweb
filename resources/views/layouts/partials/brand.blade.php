@@ -20,19 +20,19 @@
 			<!--begin::Header tabs-->
 			<ul class="nav flex-nowrap text-nowrap">
 				<li class="nav-item">
-					<a class="nav-link active" data-bs-toggle="tab" href="#kt_header_navs_tab_1">Features</a>
+					<a class="nav-link active" data-bs-toggle="tab" href="#kt_header_navs_tab_1">Catalgos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" data-bs-toggle="tab" href="#kt_header_navs_tab_2">Forms</a>
+					<a class="nav-link" data-bs-toggle="tab" href="#kt_header_navs_tab_2">Operaciones</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" data-bs-toggle="tab" href="#kt_header_navs_tab_3">Applications</a>
+					<a class="nav-link" data-bs-toggle="tab" href="#kt_header_navs_tab_3">Administración</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" data-bs-toggle="tab" href="#kt_header_navs_tab_4">Reports</a>
+					<a class="nav-link" data-bs-toggle="tab" href="#kt_header_navs_tab_4">Reportes</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" data-bs-toggle="tab" href="#kt_header_navs_tab_5">Help</a>
+					<a class="nav-link" data-bs-toggle="tab" href="#kt_header_navs_tab_5">Ayuda</a>
 				</li>
 			</ul>
 			<!--begin::Header tabs-->

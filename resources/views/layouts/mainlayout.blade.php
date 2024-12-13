@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-
+<meta name="csrf" value="{{ csrf_token() }">
 <head>
     @include('layouts.partials.favicon')
     @include('layouts.partials.head')
@@ -40,7 +40,12 @@
                 @include('layouts.partials.header')
                 @include('layouts.partials.toolbar')
                 <!--begin::Container-->
+                <div class="container-xxl">
+                @include('layouts.alertas')
+                </div>
+                
                 <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
+                   
                     @yield('contenido')
                 </div>
                 <!--end::Container-->

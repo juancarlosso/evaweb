@@ -45,17 +45,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6 col-12 mb-3 mt-2" id="divClientes" style="display:none;">
-                        <div class="form-group">
-                            <label class="form-label">Cliente</label>
-                            <select  class="select2" name="cliente_id" id="cliente" >
-                                <option value="">Selecciona un cliente</option>
-                               @foreach($clientes as $cliente)
-                                    <option value="{{$cliente->id}}"  @selected(old('cliente_id') == $cliente->id)>{{$cliente->empresa}}</option>
-                               @endforeach
-                            </select>
-                        </div>
-                    </div>
+                    
                     <div class="col-lg-3 col-sm-6 col-12 mt-2">
                         <div class="form-group">
                             <label class="form-label">Status</label>
