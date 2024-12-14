@@ -110,7 +110,7 @@ class UserController extends Controller
     public function edit($id)
     {
         $usuario = User::findOrFail($id);
-        return view('usuarios.edit')->with('usuario', $usuario);
+        return response()->json($usuario);
     }
 
     /*

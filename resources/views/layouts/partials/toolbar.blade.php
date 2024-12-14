@@ -3,8 +3,7 @@
 	<!--begin::Container-->
 	<div id="kt_toolbar_container" class="container-xxl d-flex flex-stack flex-wrap gap-2">
 		@yield('breadcrumb')
-
-		@include('layouts.partials.filtros')
+		@yield('botones_superiores')
 	</div>
 	<!--end::Container-->
 </div>
