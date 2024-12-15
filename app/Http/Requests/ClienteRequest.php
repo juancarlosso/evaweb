@@ -36,6 +36,7 @@ class ClienteRequest extends FormRequest
      */
     public function rules()
     {
+
         if($this->getMethod() == "POST") {
             return [
                 'rfc' => 'required|unique:clientes,rfc',
@@ -45,7 +46,7 @@ class ClienteRequest extends FormRequest
          }
          else{
             return [
-				'rfc' => 'unique:clientes,rfc,' .$this->rfc,
+				'rfc' => 'unique:clientes,rfc,' .$this->cliente,
                 'razon_social' => 'required',
                 'alias' => 'required',
             ];

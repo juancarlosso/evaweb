@@ -25,7 +25,7 @@ class ClienteController extends Controller
 	public function index()
 	{
 		session(['modulo' => 'catalogos']);
-		$clientes = Cliente::orderBy('name')->paginate(config('constantes.itemsPorPagina'));
+		$clientes = Cliente::paginate(config('constantes.itemsPorPagina'));
 		return view('clientes.index')->with('clientes', $clientes);
 	}
 
@@ -117,8 +117,8 @@ class ClienteController extends Controller
 			$nombre_archivo = $dir . $nombre_archivo;
 			$nombre_archivo = str_replace("public/", "storage/", $nombre_archivo);
 			$cliente->logotipo = $nombre_archivo;
-			$cliente->save();
 		}
+		$cliente->save();
 		
 
 		return redirect()->route('clientes.index')->with('success', 'El cliente ha sido actualizado');
