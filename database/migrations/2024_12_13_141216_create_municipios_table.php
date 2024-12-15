@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('municipios', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre')->nullable();
+            $table->unsignedBigInteger('estado_id')->nullable();
+            $table->foreign('estado_id')->references('id')->on('estados')->onDelete('cascade');
             $table->timestamps();
         });
     }

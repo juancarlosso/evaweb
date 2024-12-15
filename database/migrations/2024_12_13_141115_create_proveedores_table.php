@@ -13,6 +13,19 @@ return new class extends Migration
     {
         Schema::create('proveedores', function (Blueprint $table) {
             $table->id();
+            $table->string('rfc')->unique()->nullable();
+            $table->string('razon_social')->nullable();
+            $table->string('alias')->nullable();
+            $table->string('calle')->nullable();
+            $table->string('num_ext')->nullable();
+            $table->string('num_int')->nullable();
+            $table->string('cp')->nullable();
+            $table->string('colonia')->nullable();
+            $table->string('municipio')->nullable();
+            $table->string('ciudad')->nullable();
+            $table->string('logotipo')->nullable();
+            $table->string('tipos_asistencias')->nullable();
+            $table->integer('activo')->default(1);
             $table->timestamps();
         });
     }

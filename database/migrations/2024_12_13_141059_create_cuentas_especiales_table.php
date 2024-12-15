@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('cuentas_especiales', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre')->nullable();
+            $table->unsignedBigInteger('cliente_id')->nullable();
+            $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
             $table->timestamps();
         });
     }

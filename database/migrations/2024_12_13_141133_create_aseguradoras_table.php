@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('aseguradoras', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre')->nullable();
+            $table->integer('activo')->default(1);
             $table->timestamps();
         });
     }
