@@ -8,8 +8,8 @@
          */
 function borrado(id) {
 	Swal.fire({
-		title: '¿Eliminar el proveedor?',
-		text: "Todo lo que haya realizado con este proveedor sera eliminado y no se podrá recuperar!",
+		title: '¿Eliminar el estado?',
+		text: "Todo lo que haya realizado con este estado sera eliminado y no se podrá recuperar!",
 		icon: 'warning',
 		showCancelButton: true,
 		confirmButtonText: 'Si, Eliminar!',
@@ -35,19 +35,7 @@ function getInfo(id){
 		type: 'get',
 		success: function(response) {
 			$("#editarModal").modal('show');
-			$("#rfc").val(response.rfc);
-			$("#razon_social").val(response.razon_social);
-			$("#alias").val(response.alias);
-			$("#calle").val(response.calle);
-			$("#num_ext").val(response.num_ext);
-			$("#num_int").val(response.num_int);
-			$("#cp").val(response.cp);
-			$("#colonia").val(response.colonia);
-			$("#municipio").val(response.municipio);
-			$("#ciudad").val(response.ciudad);
-			$("#estado").val(response.estado);
-			$("#estado").trigger('change');
-			$("#logotipo").css('background-image', 'url("/'+response.logotipo+'")'); 
+			$("#nombre").val(response.nombre);
 		},
 
 	});
