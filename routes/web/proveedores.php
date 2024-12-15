@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\ProveedorController;
 
 
 Route::group(['middleware' => ['auth']], function () {
-     Route::resource('proveedores', ClienteController::class );
+     Route::resource('proveedores', ProveedorController::class );
 });

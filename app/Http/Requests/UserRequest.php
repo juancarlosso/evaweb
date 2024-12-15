@@ -50,7 +50,7 @@ class UserRequest extends FormRequest
                 'name' => 'required|max:255',
                 'perfil' => 'required',
                 'status' => 'required',
-                'email' => 'unique:users,email,' .$this->usuario,
+                'email' => 'unique:users,email,' .$this->provee,
             ];
         }
     }

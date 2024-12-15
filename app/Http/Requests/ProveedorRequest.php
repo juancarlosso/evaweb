@@ -36,6 +36,7 @@ class ProveedorRequest extends FormRequest
      */
     public function rules()
     {
+       
         if($this->getMethod() == "POST") {
             return [
                 'rfc' => 'required|unique:proveedores,rfc',
@@ -45,7 +46,7 @@ class ProveedorRequest extends FormRequest
          }
          else{
             return [
-				'rfc' => 'unique:proveedores,rfc,' .$this->rfc,
+				
                 'razon_social' => 'required',
                 'alias' => 'required',
             ];
