@@ -41,6 +41,7 @@ function getInfo(id){
 			$("#status").val(response.status);
 			$("#perfil").val(response.perfil);
 			$("#perfil").trigger('change');
+			$("#fotoPerfil").css('background-image', 'url("/'+response.foto+'")'); 
 		},
 
 	});

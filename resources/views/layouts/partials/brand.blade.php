@@ -10,7 +10,7 @@
 	<!--end::Heaeder navs toggle-->
 	<!--begin::Logo-->
 	<a href="index.html" class="d-flex align-items-center">
-		<img alt="Logo" src="assets/media/logos/demo20.svg" class="h-25px h-lg-30px" />
+		<img alt="Logo" src="{{asset('assets/media/logos/demo20.svg')}}" class="h-25px h-lg-30px" />
 	</a>
 	<!--end::Logo-->
 	<!--begin::Tabs wrapper-->
