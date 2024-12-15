@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\CuentasEspecialesController;
 
 
 Route::group(['middleware' => ['auth']], function () {
-     Route::resource('cuentas_especiales', ClienteController::class);
+     Route::resource('cuentas_especiales', CuentasEspecialesController::class);
 });
