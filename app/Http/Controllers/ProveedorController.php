@@ -49,6 +49,7 @@ class ProveedorController extends Controller
     */
 	public function store(ProveedorRequest $request)
 	{
+		
 		$proveedor = Proveedor::create($request->all());
 		if ($request->hasFile('logotipo')) {
 			$extension = $request->logotipo->extension();
@@ -60,6 +61,13 @@ class ProveedorController extends Controller
 			$proveedor->logotipo = $nombre_archivo;
 			$proveedor->save();
 		}
+
+		if(isset($request->tipo_asistencia)){
+			$tipo_asistencia=implode(",",$request->tipo_asistencia);
+			$proveedor->tipos_asistencias=$tipo_asistencia;
+			$proveedor->save();
+		}
+		
 		return redirect()->route('proveedores.index')->with('success', 'El proveedor ha sido creado');
 	}
 
@@ -90,6 +98,7 @@ class ProveedorController extends Controller
 	public function edit($id)
 	{
 		$proveedor = Proveedor::findOrFail($id);
+		$proveedor->tipos_asistencias=explode(',',$proveedor->tipos_asistencias);
 		return response()->json($proveedor);
 	}
 

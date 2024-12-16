@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\MunicipioController;
 
 
 Route::group(['middleware' => ['auth']], function () {
-     Route::resource('municipios', ClienteController::class);
+     Route::resource('municipios', MunicipioController::class);
 });

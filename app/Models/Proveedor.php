@@ -21,7 +21,7 @@ class Proveedor extends Model
 		'municipio',
 		'ciudad',
 		'logotipo',
-		'tipo_asistencias',
+		'tipos_asistencias',
 		'activo'
     ];
 }

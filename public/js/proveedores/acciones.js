@@ -45,6 +45,9 @@ function getInfo(id){
 			$("#colonia").val(response.colonia);
 			$("#municipio").val(response.municipio);
 			$("#ciudad").val(response.ciudad);
+			console.log(response.tipos_asistencias)
+			$("#tipo_asistencia").val(response.tipos_asistencias);
+			$("#tipo_asistencia").trigger('change');
 			$("#estado").val(response.estado);
 			$("#estado").trigger('change');
 			$("#logotipo").css('background-image', 'url("/'+response.logotipo+'")'); 

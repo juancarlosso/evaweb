@@ -78,7 +78,7 @@
 							<!--begin:Menu item-->
 							<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
 								<!--begin:Menu link-->
-								<span class="menu-link py-3">
+								<span class="menu-link py-3 {{request()->is(['clasificaciones/tipos_servicios/*']) ? 'active' : ''}}">
 									<span class="menu-title">Clasificaciones</span>
 									<span class="menu-arrow d-lg-none"></span>
 								</span>
@@ -88,7 +88,7 @@
 									<!--begin:Menu item-->
 									<div class="menu-item">
 										<!--begin:Menu link-->
-										<a class="menu-link py-3 {{request()->is(['municipios','municipios/*']) ? 'active' : ''}}" href="{{route('tipos_servicios.index')}}" >
+										<a class="menu-link py-3 {{request()->is(['clasificaciones','clasificaciones/tipos_servicios/*']) ? 'active' : ''}}" href="{{route('clasificaciones.index','tipos_servicios')}}" >
 											<span class="menu-icon">
 												<i class="fa-regular fa-circle-dot"></i>
 											</span>
@@ -100,7 +100,7 @@
 									<!--begin:Menu item-->
 									<div class="menu-item">
 										<!--begin:Menu link-->
-										<a class="menu-link py-3 {{request()->is(['coberturas_poliza','coberturas_poliza/*']) ? 'active' : ''}}" href="{{route('coberturas_poliza.index')}}" >
+										<a class="menu-link py-3 {{request()->is(['coberturas_poliza','coberturas_poliza/*']) ? 'active' : ''}}" href="{{route('clasificaciones.index','coberturas_poliza')}}" >
 											<span class="menu-icon">
 												<i class="fa-regular fa-circle-dot"></i>
 											</span>
@@ -112,7 +112,7 @@
 									<!--begin:Menu item-->
 									<div class="menu-item">
 										<!--begin:Menu link-->
-										<a class="menu-link py-3 {{request()->is(['etapas_cabina','etapas_cabina/*']) ? 'active' : ''}}" href="{{route('etapas_cabina.index')}}" >
+										<a class="menu-link py-3 {{request()->is(['etapas_cabina','etapas_cabina/*']) ? 'active' : ''}}" href="{{route('clasificaciones.index','etapas_cabina')}}" >
 											<span class="menu-icon">
 												<i class="fa-regular fa-circle-dot"></i>
 											</span>
@@ -124,7 +124,7 @@
 									<!--begin:Menu item-->
 									<div class="menu-item">
 										<!--begin:Menu link-->
-										<a class="menu-link py-3 {{request()->is(['delitos','delitos/*']) ? 'active' : ''}}" href="{{route('delitos.index')}}" >
+										<a class="menu-link py-3 {{request()->is(['delitos','delitos/*']) ? 'active' : ''}}" href="{{route('clasificaciones.index','delitos')}}" >
 											<span class="menu-icon">
 												<i class="fa-regular fa-circle-dot"></i>
 											</span>
@@ -136,7 +136,7 @@
 									<!--begin:Menu item-->
 									<div class="menu-item">
 										<!--begin:Menu link-->
-										<a class="menu-link py-3 {{request()->is(['responabilidades_iniciales','responabilidades_iniciales/*']) ? 'active' : ''}}" href="{{route('responabilidades_iniciales.index')}}" >
+										<a class="menu-link py-3 {{request()->is(['responabilidades_iniciales','responabilidades_iniciales/*']) ? 'active' : ''}}" href="{{route('clasificaciones.index','responabilidades_iniciales')}}" >
 											<span class="menu-icon">
 												<i class="fa-regular fa-circle-dot"></i>
 											</span>
@@ -148,7 +148,7 @@
 									<!--begin:Menu item-->
 									<div class="menu-item">
 										<!--begin:Menu link-->
-										<a class="menu-link py-3 {{request()->is(['responabilidades_finales','responabilidades_finales/*']) ? 'active' : ''}}" href="{{route('responabilidades_finales.index')}}" >
+										<a class="menu-link py-3 {{request()->is(['responabilidades_finales','responabilidades_finales/*']) ? 'active' : ''}}" href="{{route('clasificaciones.index','responabilidades_finales')}}" >
 											<span class="menu-icon">
 												<i class="fa-regular fa-circle-dot"></i>
 											</span>
@@ -160,7 +160,7 @@
 									<!--begin:Menu item-->
 									<div class="menu-item">
 										<!--begin:Menu link-->
-										<a class="menu-link py-3 {{request()->is(['tipos_estimaciones','tipos_estimaciones/*']) ? 'active' : ''}}" href="{{route('tipos_estimaciones.index')}}" >
+										<a class="menu-link py-3 {{request()->is(['tipos_estimaciones','tipos_estimaciones/*']) ? 'active' : ''}}" href="{{route('clasificaciones.index','tipos_estimaciones')}}" >
 											<span class="menu-icon">
 												<i class="fa-regular fa-circle-dot"></i>
 											</span>
@@ -172,7 +172,7 @@
 									<!--begin:Menu item-->
 									<div class="menu-item">
 										<!--begin:Menu link-->
-										<a class="menu-link py-3 {{request()->is(['estados_conductor','estados_conductor/*']) ? 'active' : ''}}" href="{{route('estados_conductor.index')}}" >
+										<a class="menu-link py-3 {{request()->is(['estados_conductor','estados_conductor/*']) ? 'active' : ''}}" href="{{route('clasificaciones.index','estados_conductor')}}" >
 											<span class="menu-icon">
 												<i class="fa-regular fa-circle-dot"></i>
 											</span>
@@ -184,7 +184,7 @@
 									<!--begin:Menu item-->
 									<div class="menu-item">
 										<!--begin:Menu link-->
-										<a class="menu-link py-3 {{request()->is(['tipos_documentos','tipos_documentos/*']) ? 'active' : ''}}" href="{{route('tipos_documentos.index')}}" >
+										<a class="menu-link py-3 {{request()->is(['tipos_documentos','tipos_documentos/*']) ? 'active' : ''}}" href="{{route('clasificaciones.index','tipos_documentos')}}" >
 											<span class="menu-icon">
 												<i class="fa-regular fa-circle-dot"></i>
 											</span>
@@ -196,7 +196,7 @@
 									<!--begin:Menu item-->
 									<div class="menu-item">
 										<!--begin:Menu link-->
-										<a class="menu-link py-3 {{request()->is(['tipos_asistencias','tipos_asistencias/*']) ? 'active' : ''}}" href="{{route('tipos_asistencias.index')}}" >
+										<a class="menu-link py-3 {{request()->is(['tipos_asistencias','tipos_asistencias/*']) ? 'active' : ''}}" href="{{route('clasificaciones.index','tipos_asistencias')}}" >
 											<span class="menu-icon">
 												<i class="fa-regular fa-circle-dot"></i>
 											</span>
@@ -208,7 +208,7 @@
 									<!--begin:Menu item-->
 									<div class="menu-item">
 										<!--begin:Menu link-->
-										<a class="menu-link py-3 {{request()->is(['tipos_autoridad','tipos_autoridad/*']) ? 'active' : ''}}" href="{{route('tipos_autoridad.index')}}" >
+										<a class="menu-link py-3 {{request()->is(['tipos_autoridad','tipos_autoridad/*']) ? 'active' : ''}}" href="{{route('clasificaciones.index','tipos_autoridad')}}" >
 											<span class="menu-icon">
 												<i class="fa-regular fa-circle-dot"></i>
 											</span>
@@ -220,7 +220,7 @@
 									<!--begin:Menu item-->
 									<div class="menu-item">
 										<!--begin:Menu link-->
-										<a class="menu-link py-3 {{request()->is(['resultados_conclusiones','resultados_conclusiones/*']) ? 'active' : ''}}" href="{{route('resultados_conclusiones.index')}}" >
+										<a class="menu-link py-3 {{request()->is(['resultados_conclusiones','resultados_conclusiones/*']) ? 'active' : ''}}" href="{{route('clasificaciones.index','resultados_conclusiones')}}" >
 											<span class="menu-icon">
 												<i class="fa-regular fa-circle-dot"></i>
 											</span>
@@ -232,7 +232,7 @@
 									<!--begin:Menu item-->
 									<div class="menu-item">
 										<!--begin:Menu link-->
-										<a class="menu-link py-3 {{request()->is(['tipos_expedientes','tipos_expedientes/*']) ? 'active' : ''}}" href="{{route('tipos_expedientes.index')}}" >
+										<a class="menu-link py-3 {{request()->is(['tipos_expedientes','tipos_expedientes/*']) ? 'active' : ''}}" href="{{route('clasificaciones.index','tipos_expedientes')}}" >
 											<span class="menu-icon">
 												<i class="fa-regular fa-circle-dot"></i>
 											</span>
@@ -244,11 +244,11 @@
 									<!--begin:Menu item-->
 									<div class="menu-item">
 										<!--begin:Menu link-->
-										<a class="menu-link py-3 {{request()->is(['formas_conclusion','formas_conclusion/*']) ? 'active' : ''}}" href="{{route('formas_conclusion.index')}}" >
+										<a class="menu-link py-3 {{request()->is(['formas_conclusion','formas_conclusion/*']) ? 'active' : ''}}" href="{{route('clasificaciones.index','formas_conclusion')}}" >
 											<span class="menu-icon">
 												<i class="fa-regular fa-circle-dot"></i>
 											</span>
-											<span class="menu-title">Formas de conlusión</span>
+											<span class="menu-title">Formas de conclusión</span>
 										</a>
 										<!--end:Menu link-->
 									</div>
@@ -256,7 +256,7 @@
 									<!--begin:Menu item-->
 									<div class="menu-item">
 										<!--begin:Menu link-->
-										<a class="menu-link py-3 {{request()->is(['situaciones_terceros','situaciones_terceros/*']) ? 'active' : ''}}" href="{{route('situaciones_terceros.index')}}" >
+										<a class="menu-link py-3 {{request()->is(['situaciones_terceros','situaciones_terceros/*']) ? 'active' : ''}}" href="{{route('clasificaciones.index','situaciones_terceros')}}" >
 											<span class="menu-icon">
 												<i class="fa-regular fa-circle-dot"></i>
 											</span>

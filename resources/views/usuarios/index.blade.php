@@ -460,7 +460,7 @@
                                 <a href="apps/user-management/users/view.html">
                                     <div class="symbol-label">
                                         @if($usuario->foto)
-                                        <img src="{{$usuario->foto}}" alt="User" class="w-100" />
+                                        <img src="{{asset($usuario->foto)}}" alt="User" class="w-100" />
                                         @else
 
                                         <img src="https://avatar.oxro.io/avatar.svg?name={{ $usuario->name }}&caps=3&bold=true" alt="User" class="w-100" />
