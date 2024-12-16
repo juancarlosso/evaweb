@@ -909,11 +909,16 @@
 					</div>
 					<!--end::Avatar-->
 					<!--begin::Username-->
-					<div class="d-flex flex-column">
-						<div class="fw-bold d-flex align-items-center fs-5">{{auth()->user()->name}}
-							<span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">{{config('constantes.perfiles')[auth()->user()->perfil]}}</span>
+					<div class="row">
+						<div class="col-md-12 fw-bold d-flex fs-5">
+							{{auth()->user()->name}}
 						</div>
-						<a href="#" class="fw-semibold text-muted text-hover-primary fs-7">{{auth()->user()->email}}</a>
+						<div class="col-md-12">
+							<span class="badge badge-light-success fw-bold fs-8 ">{{config('constantes.perfiles')[auth()->user()->perfil]}}</span>
+						</div>
+						<div class="col-md-12">
+							<a href="#" class="fw-semibold text-muted text-hover-primary fs-8">{{auth()->user()->email}}</a>
+						</div>
 					</div>
 					<!--end::Username-->
 				</div>

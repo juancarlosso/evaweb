@@ -48631,7 +48631,7 @@ body {
 
 @media (min-width: 992px) {
   .content {
-    padding: 30px 0 0 0;
+    /*padding: 30px 0 0 0;*/
   }
   .aside-enabled .content {
     padding-left: 30px;
