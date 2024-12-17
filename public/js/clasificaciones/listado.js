@@ -204,8 +204,6 @@ var KTUsersList = function() {
 			initUserTable();
 			initToggleToolbar();
 			handleSearchDatatable();
-			handleResetForm();
-			handleFilterDatatable();
 
 		}
 	}

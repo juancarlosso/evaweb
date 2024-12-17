@@ -17,16 +17,7 @@
 <!--end::Page title-->
 @endsection
 @section('botones_superiores')
-<!--begin::Actions-->
-<div class="d-flex align-items-center">
-    <!--begin::Button-->
-    <a href="{{route('home')}}" class="btn btn-info me-3">
-        <i class="fa fa-regular fa-arrow-left">
-        </i>Regresar</a>
-    <!--end::Button-->
 
-</div>
-<!--end::Actions-->
 @endsection
 @section('contenido')
 <!--begin::Post-->

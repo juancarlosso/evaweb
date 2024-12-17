@@ -17,16 +17,7 @@
 <!--end::Page title-->
 @endsection
 @section('botones_superiores')
-<!--begin::Actions-->
-<div class="d-flex align-items-center">
-    <!--begin::Button-->
-    <a href="{{route('home')}}" class="btn btn-info me-3">
-        <i class="fa fa-regular fa-arrow-left">
-        </i>Regresar</a>
-    <!--end::Button-->
 
-</div>
-<!--end::Actions-->
 @endsection
 @section('contenido')
 <!--begin::Post-->
@@ -393,7 +384,7 @@
                                             <!--end::Label-->
                                             <!--begin::Input-->
                                             <select class="form-select form-select-solid fw-bold" name="status" id="status" data-kt-select2="true" data-placeholder="Seleccionar opcion" data-allow-clear="true" data-kt-user-table-filter="role" data-hide-search="true" required>
-                                                <option value="1" selected>Activo</option>
+                                                <option value="1">Activo</option>
                                                 <option value="0">Inactivo</option>
                                             </select>
                                             <!--end::Input-->
