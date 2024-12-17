@@ -250,30 +250,25 @@
                             @endif
                         </td>
                         <td>
-                            <a href="#" class="btn btn-light btn-active-light-primary btn-flex btn-center btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Acciones
-                                <i class="ki-duotone ki-down fs-5 ms-1"></i></a>
-                            <!--begin::Menu-->
-                            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <input type="hidden" value="{{route('aseguradoras.edit',$aseguradora->id)}}" id="url_editar{{$aseguradora->id}}">
-                                    <input type="hidden" value="{{route('aseguradoras.update',$aseguradora->id)}}" id="url_update{{$aseguradora->id}}">
-                                    <a href="#" onclick="getInfo({{$aseguradora->id}})" class="menu-link px-3">Editar</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="javascript:borrado({{ $aseguradora->id }})" class="menu-link px-3" data-kt-users-table-filter="delete_row">Eliminar</a>
-                                    <form action="{{ route('aseguradoras.destroy', $aseguradora->id) }}"
-                                        method="post" name="formBorrar{{ $aseguradora->id }}"
-                                        id="formBorrar{{ $aseguradora->id }}">
-                                        @csrf
-                                        {{ method_field('DELETE') }}
-                                    </form>
-                                </div>
-                                <!--end::Menu item-->
-                            </div>
-                            <!--end::Menu-->
+
+                            <input type="hidden" value="{{route('aseguradoras.edit',$aseguradora->id)}}" id="url_editar{{$aseguradora->id}}">
+                            <input type="hidden" value="{{route('aseguradoras.update',$aseguradora->id)}}" id="url_update{{$aseguradora->id}}">
+                            <button type="button" class="btn btn-icon btn-sm h-auto btn-color-gray-500 btn-active-color-primary justify-content-end" onclick="getInfo({{$aseguradora->id}})" title="Editar">
+                                <i class="fa-duotone fa-solid fa-pen-to-square fs-2"></i>
+                            </button>
+
+                            <a href="javascript:borrado({{ $aseguradora->id }})" class="menu-link px-3" data-kt-users-table-filter="delete_row">
+                                <button type="button" class="btn btn-icon btn-sm h-auto btn-color-gray-500 btn-active-color-danger justify-content-end" title="Eliminar">
+                                    <i class="fa-duotone fa-solid fa-trash fs-2"></i>
+                                </button>
+                            </a>
+                            <form action="{{ route('aseguradoras.destroy', $aseguradora->id) }}"
+                                method="post" name="formBorrar{{ $aseguradora->id }}"
+                                id="formBorrar{{ $aseguradora->id }}">
+                                @csrf
+                                {{ method_field('DELETE') }}
+                            </form>
+
                         </td>
                     </tr>
                     @endforeach

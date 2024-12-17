@@ -115,7 +115,7 @@
                                             <!--end::Label-->
                                             <!--begin::Input-->
                                             <!--begin::Input-->
-                                            <select class="form-select form-select-solid fw-bold" name="estado_id"  data-kt-select2="true" data-placeholder="Seleccionar opcion" data-allow-clear="true" data-kt-user-table-filter="role" data-hide-search="false" required>
+                                            <select class="form-select form-select-solid fw-bold" name="estado_id" data-kt-select2="true" data-placeholder="Seleccionar opcion" data-allow-clear="true" data-kt-user-table-filter="role" data-hide-search="false" required>
                                                 <option value=""></option>
                                                 @foreach($estados as $estado)
                                                 <option value="{{$estado->id}}">{{$estado->nombre}}</option>
@@ -251,30 +251,27 @@
                         <td>{{$municipio->nombre}}</td>
                         <td>{{$municipio->estado->nombre}}</td>
                         <td>
-                            <a href="#" class="btn btn-light btn-active-light-primary btn-flex btn-center btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Acciones
-                                <i class="ki-duotone ki-down fs-5 ms-1"></i></a>
-                            <!--begin::Menu-->
-                            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <input type="hidden" value="{{route('municipios.edit',$municipio->id)}}" id="url_editar{{$municipio->id}}">
-                                    <input type="hidden" value="{{route('municipios.update',$municipio->id)}}" id="url_update{{$municipio->id}}">
-                                    <a href="#" onclick="getInfo({{$municipio->id}})" class="menu-link px-3">Editar</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="javascript:borrado({{ $municipio->id }})" class="menu-link px-3" data-kt-users-table-filter="delete_row">Eliminar</a>
-                                    <form action="{{ route('municipios.destroy', $municipio->id) }}"
-                                        method="post" name="formBorrar{{ $municipio->id }}"
-                                        id="formBorrar{{ $municipio->id }}">
-                                        @csrf
-                                        {{ method_field('DELETE') }}
-                                    </form>
-                                </div>
-                                <!--end::Menu item-->
-                            </div>
-                            <!--end::Menu-->
+
+                            <input type="hidden" value="{{route('municipios.edit',$municipio->id)}}" id="url_editar{{$municipio->id}}">
+                            <input type="hidden" value="{{route('municipios.update',$municipio->id)}}" id="url_update{{$municipio->id}}">
+
+                            <button type="button" class="btn btn-icon btn-sm h-auto btn-color-gray-500 btn-active-color-primary justify-content-end" onclick="getInfo({{$municipio->id}})" title="Editar">
+                                <i class="fa-duotone fa-solid fa-pen-to-square fs-2"></i>
+                            </button>
+
+                            <a href="javascript:borrado({{ $municipio->id }})" class="menu-link px-3" data-kt-users-table-filter="delete_row">
+                                <button type="button" class="btn btn-icon btn-sm h-auto btn-color-gray-500 btn-active-color-danger justify-content-end" title="Eliminar">
+                                    <i class="fa-duotone fa-solid fa-trash fs-2"></i>
+                                </button>
+                            </a>
+                           
+                            <form action="{{ route('municipios.destroy', $municipio->id) }}"
+                                method="post" name="formBorrar{{ $municipio->id }}"
+                                id="formBorrar{{ $municipio->id }}">
+                                @csrf
+                                {{ method_field('DELETE') }}
+                            </form>
+
                         </td>
                     </tr>
                     @endforeach

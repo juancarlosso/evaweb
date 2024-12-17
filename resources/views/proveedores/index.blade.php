@@ -244,7 +244,7 @@
                                             <label class=" fw-semibold fs-6 mb-2">Tipo Asistencia</label>
                                             <!--end::Label-->
                                             <!--begin::Input-->
-                                            <select class="form-select form-select-solid fw-bold" name="tipo_asistencia[]" multiple data-kt-select2="true" data-placeholder="Seleccionar opcion" data-allow-clear="true" data-kt-user-table-filter="role" data-hide-search="false" >
+                                            <select class="form-select form-select-solid fw-bold" name="tipo_asistencia[]" multiple data-kt-select2="true" data-placeholder="Seleccionar opcion" data-allow-clear="true" data-kt-user-table-filter="role" data-hide-search="false">
                                                 <option value=""></option>
                                                 @foreach($tipos_asistencia as $tipo)
                                                 <option value="{{$tipo->id}}">{{$tipo->nombre}}</option>
@@ -470,13 +470,13 @@
 
                                         </div>
                                         <!--end::Input group-->
-                                         <!--begin::Input group-->
-                                         <div class="fv-row mb-7">
+                                        <!--begin::Input group-->
+                                        <div class="fv-row mb-7">
                                             <!--begin::Label-->
                                             <label class=" fw-semibold fs-6 mb-2">Tipo Asistencia</label>
                                             <!--end::Label-->
                                             <!--begin::Input-->
-                                            <select class="form-select form-select-solid fw-bold" id="tipo_asistencia" name="tipo_asistencia[]" multiple data-kt-select2="true" data-placeholder="Seleccionar opcion" data-allow-clear="true" data-kt-user-table-filter="role" data-hide-search="false" >
+                                            <select class="form-select form-select-solid fw-bold" id="tipo_asistencia" name="tipo_asistencia[]" multiple data-kt-select2="true" data-placeholder="Seleccionar opcion" data-allow-clear="true" data-kt-user-table-filter="role" data-hide-search="false">
                                                 <option value=""></option>
                                                 @foreach($tipos_asistencia as $tipo)
                                                 <option value="{{$tipo->id}}">{{$tipo->nombre}}</option>
@@ -601,30 +601,25 @@
                             @endif
                         </td>
                         <td>
-                            <a href="#" class="btn btn-light btn-active-light-primary btn-flex btn-center btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Acciones
-                                <i class="ki-duotone ki-down fs-5 ms-1"></i></a>
-                            <!--begin::Menu-->
-                            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <input type="hidden" value="{{route('proveedores.edit',$proveedor->id)}}" id="url_editar{{$proveedor->id}}">
-                                    <input type="hidden" value="{{route('proveedores.update',$proveedor->id)}}" id="url_update{{$proveedor->id}}">
-                                    <a href="#" onclick="getInfo({{$proveedor->id}})" class="menu-link px-3">Editar</a>
-                                </div>
-                                <!--end::Menu item-->
-                                <!--begin::Menu item-->
-                                <div class="menu-item px-3">
-                                    <a href="javascript:borrado({{ $proveedor->id }})" class="menu-link px-3" data-kt-users-table-filter="delete_row">Eliminar</a>
-                                    <form action="{{ route('proveedores.destroy', $proveedor->id) }}"
-                                        method="post" name="formBorrar{{ $proveedor->id }}"
-                                        id="formBorrar{{ $proveedor->id }}">
-                                        @csrf
-                                        {{ method_field('DELETE') }}
-                                    </form>
-                                </div>
-                                <!--end::Menu item-->
-                            </div>
-                            <!--end::Menu-->
+                          
+                        <input type="hidden" value="{{route('proveedores.edit',$proveedor->id)}}" id="url_editar{{$proveedor->id}}">
+                        <input type="hidden" value="{{route('proveedores.update',$proveedor->id)}}" id="url_update{{$proveedor->id}}">
+                            <button type="button" class="btn btn-icon btn-sm h-auto btn-color-gray-500 btn-active-color-primary justify-content-end" onclick="getInfo({{$proveedor->id}})" title="Editar">
+                                <i class="fa-duotone fa-solid fa-pen-to-square fs-2"></i>
+                            </button>
+
+                            <a href="javascript:borrado({{ $proveedor->id }})" class="menu-link px-3" data-kt-users-table-filter="delete_row">
+                                <button type="button" class="btn btn-icon btn-sm h-auto btn-color-gray-500 btn-active-color-danger justify-content-end" title="Eliminar">
+                                    <i class="fa-duotone fa-solid fa-trash fs-2"></i>
+                                </button>
+                            </a>
+                            <form action="{{ route('proveedores.destroy', $proveedor->id) }}"
+                                method="post" name="formBorrar{{ $proveedor->id }}"
+                                id="formBorrar{{ $proveedor->id }}">
+                                @csrf
+                                {{ method_field('DELETE') }}
+                            </form>
+
                         </td>
                     </tr>
                     @endforeach
