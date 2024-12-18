@@ -27,7 +27,7 @@
 						</i>
 						<!--end::Icon-->
 						<!--begin::Input-->
-						<input type="text" class="search-input form-control form-control-flush ps-10" name="search" value="" placeholder="Search..." data-kt-search-element="input" />
+						<input type="text" class="search-input form-control form-control-flush ps-10" name="search" value="" placeholder="Buscar..." data-kt-search-element="input" />
 						<!--end::Input-->
 						<!--begin::Spinner-->
 						<span class="search-spinner position-absolute top-50 end-0 translate-middle-y lh-0 d-none me-1" data-kt-search-element="spinner">
@@ -53,9 +53,9 @@
 							</div>
 							<!--end::Preferences toggle-->
 							<!--begin::Advanced search toggle-->
-							<div data-kt-search-element="advanced-options-form-show" class="btn btn-icon w-20px btn-sm btn-active-color-primary" data-bs-toggle="tooltip" title="Show more search options">
+							<!-- <div data-kt-search-element="advanced-options-form-show" class="btn btn-icon w-20px btn-sm btn-active-color-primary" data-bs-toggle="tooltip" title="Show more search options">
 								<i class="ki-duotone ki-down fs-2"></i>
-							</div>
+							</div> -->
 							<!--end::Advanced search toggle-->
 						</div>
 						<!--end::Toolbar-->
@@ -333,7 +333,7 @@
 						<!--begin::Heading-->
 						<div class="d-flex flex-stack fw-semibold mb-4">
 							<!--begin::Label-->
-							<span class="text-muted fs-6 me-2">Recently Searched:</span>
+							<span class="text-muted fs-6 me-2">Búsquedas recientes:</span>
 							<!--end::Label-->
 						</div>
 						<!--end::Heading-->
@@ -353,8 +353,8 @@
 								<!--end::Symbol-->
 								<!--begin::Title-->
 								<div class="d-flex flex-column">
-									<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">BoomApp by Keenthemes</a>
-									<span class="fs-7 text-muted fw-semibold">#45789</span>
+									<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">Morales Pérez</a>
+									<span class="fs-7 text-muted fw-semibold">Siniestros</span>
 								</div>
 								<!--end::Title-->
 							</div>
@@ -375,112 +375,17 @@
 								<!--end::Symbol-->
 								<!--begin::Title-->
 								<div class="d-flex flex-column">
-									<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"Kept API Project Meeting</a>
-									<span class="fs-7 text-muted fw-semibold">#84050</span>
+									<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">Asociados P</a>
+									<span class="fs-7 text-muted fw-semibold">Proveedores</span>
 								</div>
 								<!--end::Title-->
 							</div>
 							<!--end::Item-->
-							<!--begin::Item-->
-							<div class="d-flex align-items-center mb-5">
-								<!--begin::Symbol-->
-								<div class="symbol symbol-40px me-4">
-									<span class="symbol-label bg-light">
-										<i class="ki-duotone ki-chart fs-2 text-primary">
-											<span class="path1"></span>
-											<span class="path2"></span>
-										</i>
-									</span>
-								</div>
-								<!--end::Symbol-->
-								<!--begin::Title-->
-								<div class="d-flex flex-column">
-									<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"KPI Monitoring App Launch</a>
-									<span class="fs-7 text-muted fw-semibold">#84250</span>
-								</div>
-								<!--end::Title-->
-							</div>
-							<!--end::Item-->
-							<!--begin::Item-->
-							<div class="d-flex align-items-center mb-5">
-								<!--begin::Symbol-->
-								<div class="symbol symbol-40px me-4">
-									<span class="symbol-label bg-light">
-										<i class="ki-duotone ki-chart-line-down fs-2 text-primary">
-											<span class="path1"></span>
-											<span class="path2"></span>
-										</i>
-									</span>
-								</div>
-								<!--end::Symbol-->
-								<!--begin::Title-->
-								<div class="d-flex flex-column">
-									<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">Project Reference FAQ</a>
-									<span class="fs-7 text-muted fw-semibold">#67945</span>
-								</div>
-								<!--end::Title-->
-							</div>
-							<!--end::Item-->
-							<!--begin::Item-->
-							<div class="d-flex align-items-center mb-5">
-								<!--begin::Symbol-->
-								<div class="symbol symbol-40px me-4">
-									<span class="symbol-label bg-light">
-										<i class="ki-duotone ki-sms fs-2 text-primary">
-											<span class="path1"></span>
-											<span class="path2"></span>
-										</i>
-									</span>
-								</div>
-								<!--end::Symbol-->
-								<!--begin::Title-->
-								<div class="d-flex flex-column">
-									<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"FitPro App Development</a>
-									<span class="fs-7 text-muted fw-semibold">#84250</span>
-								</div>
-								<!--end::Title-->
-							</div>
-							<!--end::Item-->
-							<!--begin::Item-->
-							<div class="d-flex align-items-center mb-5">
-								<!--begin::Symbol-->
-								<div class="symbol symbol-40px me-4">
-									<span class="symbol-label bg-light">
-										<i class="ki-duotone ki-bank fs-2 text-primary">
-											<span class="path1"></span>
-											<span class="path2"></span>
-										</i>
-									</span>
-								</div>
-								<!--end::Symbol-->
-								<!--begin::Title-->
-								<div class="d-flex flex-column">
-									<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">Shopix Mobile App</a>
-									<span class="fs-7 text-muted fw-semibold">#45690</span>
-								</div>
-								<!--end::Title-->
-							</div>
-							<!--end::Item-->
-							<!--begin::Item-->
-							<div class="d-flex align-items-center mb-5">
-								<!--begin::Symbol-->
-								<div class="symbol symbol-40px me-4">
-									<span class="symbol-label bg-light">
-										<i class="ki-duotone ki-chart-line-down fs-2 text-primary">
-											<span class="path1"></span>
-											<span class="path2"></span>
-										</i>
-									</span>
-								</div>
-								<!--end::Symbol-->
-								<!--begin::Title-->
-								<div class="d-flex flex-column">
-									<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-semibold">"Landing UI Design" Launch</a>
-									<span class="fs-7 text-muted fw-semibold">#24005</span>
-								</div>
-								<!--end::Title-->
-							</div>
-							<!--end::Item-->
+
+
+
+
+
 						</div>
 						<!--end::Items-->
 					</div>
@@ -509,7 +414,7 @@
 				<!--begin::Preferences-->
 				<form data-kt-search-element="advanced-options-form" class="pt-1 d-none">
 					<!--begin::Heading-->
-					<h3 class="fw-semibold text-gray-900 mb-7">Advanced Search</h3>
+					<h3 class="fw-semibold text-gray-900 mb-7">Búsqueda Avanzada</h3>
 					<!--end::Heading-->
 					<!--begin::Input group-->
 					<div class="mb-5">
@@ -523,25 +428,25 @@
 							<!--begin::Option-->
 							<label>
 								<input type="radio" class="btn-check" name="type" value="has" checked="checked" />
-								<span class="btn btn-sm btn-color-muted btn-active btn-active-primary">All</span>
+								<span class="btn btn-sm btn-color-muted btn-active btn-active-primary">Todo</span>
 							</label>
 							<!--end::Option-->
 							<!--begin::Option-->
 							<label>
 								<input type="radio" class="btn-check" name="type" value="users" />
-								<span class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">Users</span>
+								<span class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">Siniestros</span>
 							</label>
 							<!--end::Option-->
 							<!--begin::Option-->
 							<label>
 								<input type="radio" class="btn-check" name="type" value="orders" />
-								<span class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">Orders</span>
+								<span class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">Clientes</span>
 							</label>
 							<!--end::Option-->
 							<!--begin::Option-->
 							<label>
 								<input type="radio" class="btn-check" name="type" value="projects" />
-								<span class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">Projects</span>
+								<span class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">Proveedores</span>
 							</label>
 							<!--end::Option-->
 						</div>
@@ -618,12 +523,12 @@
 				<!--begin::Preferences-->
 				<form data-kt-search-element="preferences" class="pt-1 d-none">
 					<!--begin::Heading-->
-					<h3 class="fw-semibold text-gray-900 mb-7">Search Preferences</h3>
+					<h3 class="fw-semibold text-gray-900 mb-7">Opciones de Búsqueda</h3>
 					<!--end::Heading-->
 					<!--begin::Input group-->
 					<div class="pb-4 border-bottom">
 						<label class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
-							<span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Projects</span>
+							<span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Siniestros</span>
 							<input class="form-check-input" type="checkbox" value="1" checked="checked" />
 						</label>
 					</div>
@@ -631,7 +536,7 @@
 					<!--begin::Input group-->
 					<div class="py-4 border-bottom">
 						<label class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
-							<span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Targets</span>
+							<span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Clientes</span>
 							<input class="form-check-input" type="checkbox" value="1" checked="checked" />
 						</label>
 					</div>
@@ -639,7 +544,7 @@
 					<!--begin::Input group-->
 					<div class="py-4 border-bottom">
 						<label class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
-							<span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Affiliate Programs</span>
+							<span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Proveedores</span>
 							<input class="form-check-input" type="checkbox" value="1" />
 						</label>
 					</div>
@@ -647,7 +552,7 @@
 					<!--begin::Input group-->
 					<div class="py-4 border-bottom">
 						<label class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
-							<span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Referrals</span>
+							<span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Bitácora</span>
 							<input class="form-check-input" type="checkbox" value="1" checked="checked" />
 						</label>
 					</div>
@@ -655,15 +560,15 @@
 					<!--begin::Input group-->
 					<div class="py-4 border-bottom">
 						<label class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
-							<span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Users</span>
+							<span class="form-check-label text-gray-700 fs-6 fw-semibold ms-0 me-2">Usuarios</span>
 							<input class="form-check-input" type="checkbox" value="1" />
 						</label>
 					</div>
 					<!--end::Input group-->
 					<!--begin::Actions-->
 					<div class="d-flex justify-content-end pt-7">
-						<button type="reset" class="btn btn-sm btn-light fw-bold btn-active-light-primary me-2" data-kt-search-element="preferences-dismiss">Cancel</button>
-						<button type="submit" class="btn btn-sm fw-bold btn-primary">Save Changes</button>
+						<button type="reset" class="btn btn-sm btn-light fw-bold btn-active-light-primary me-2" data-kt-search-element="preferences-dismiss">Cancelar</button>
+						<button type="submit" class="btn btn-sm fw-bold btn-primary">Aceptar</button>
 					</div>
 					<!--end::Actions-->
 				</form>
@@ -689,20 +594,16 @@
 	</div>
 	<!--end::Activities-->
 	<!--begin::Chat-->
-	<div class="d-flex align-items-center ms-1">
-		<!--begin::Menu wrapper-->
+	<!-- <div class="d-flex align-items-center ms-1">
 		<div class="btn btn-icon btn-color-white bg-hover-white bg-hover-opacity-10 w-35px h-35px h-md-40px w-md-40px position-relative" id="kt_drawer_chat_toggle">
 			<i class="ki-duotone ki-message-text-2 fs-2">
 				<span class="path1"></span>
 				<span class="path2"></span>
 				<span class="path3"></span>
 			</i>
-			<!--begin::Notification animation-->
 			<span class="bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle top-0 start-50 animation-blink"></span>
-			<!--end::Notification animation-->
 		</div>
-		<!--end::Menu wrapper-->
-	</div>
+	</div> -->
 	<!--end::Chat-->
 	<!--begin::Quick links-->
 	<div class="d-flex align-items-center ms-1">
@@ -718,12 +619,12 @@
 		<!--begin::Menu-->
 		<div class="menu menu-sub menu-sub-dropdown menu-column w-250px w-lg-325px" data-kt-menu="true">
 			<!--begin::Heading-->
-			<div class="d-flex flex-column flex-center bgi-no-repeat rounded-top px-9 py-10" style="background-image:url('assets/media/misc/menu-header-bg.jpg')">
+			<div class="d-flex flex-column flex-center bgi-no-repeat rounded-top px-9 py-10" style="background-image:url('{{ asset('assets/media/misc/menu-header-bg.jpg') }}'">
 				<!--begin::Title-->
-				<h3 class="text-white fw-semibold mb-3">Quick Links</h3>
+				<h3 class="text-white fw-semibold mb-3">Accesos Directos</h3>
 				<!--end::Title-->
 				<!--begin::Status-->
-				<span class="badge bg-primary text-inverse-primary py-2 px-3">25 pending tasks</span>
+				<!-- <span class="badge bg-primary text-inverse-primary py-2 px-3">25 pending tasks</span> -->
 				<!--end::Status-->
 			</div>
 			<!--end::Heading-->
@@ -737,8 +638,8 @@
 							<span class="path2"></span>
 							<span class="path3"></span>
 						</i>
-						<span class="fs-5 fw-semibold text-gray-800 mb-0">Accounting</span>
-						<span class="fs-7 text-gray-500">eCommerce</span>
+						<span class="fs-5 fw-semibold text-gray-800 mb-0 text-center">Pago Proveedores</span>
+						<!-- <span class="fs-7 text-gray-500">eCommerce</span> -->
 					</a>
 				</div>
 				<!--end:Item-->
@@ -749,8 +650,8 @@
 							<span class="path1"></span>
 							<span class="path2"></span>
 						</i>
-						<span class="fs-5 fw-semibold text-gray-800 mb-0">Administration</span>
-						<span class="fs-7 text-gray-500">Console</span>
+						<span class="fs-5 fw-semibold text-gray-800 mb-0 text-center">Reporte de Homicidios</span>
+						<!-- <span class="fs-7 text-gray-500">Console</span> -->
 					</a>
 				</div>
 				<!--end:Item-->
@@ -762,7 +663,7 @@
 							<span class="path2"></span>
 						</i>
 						<span class="fs-5 fw-semibold text-gray-800 mb-0">Projects</span>
-						<span class="fs-7 text-gray-500">Pending Tasks</span>
+						<!-- <span class="fs-7 text-gray-500">Pending Tasks</span> -->
 					</a>
 				</div>
 				<!--end:Item-->
@@ -782,11 +683,11 @@
 			<!--end:Nav-->
 			<!--begin::View more-->
 			<div class="py-2 text-center border-top">
-				<a href="pages/user-profile/activity.html" class="btn btn-color-gray-600 btn-active-color-primary">View All
+				<!-- <a href="pages/user-profile/activity.html" class="btn btn-color-gray-600 btn-active-color-primary">View All
 					<i class="ki-duotone ki-arrow-right fs-5">
 						<span class="path1"></span>
 						<span class="path2"></span>
-					</i></a>
+					</i></a> -->
 			</div>
 			<!--end::View more-->
 		</div>
@@ -835,7 +736,7 @@
 							<span class="path10"></span>
 						</i>
 					</span>
-					<span class="menu-title">Light</span>
+					<span class="menu-title">Claro</span>
 				</a>
 			</div>
 			<!--end::Menu item-->
@@ -848,7 +749,7 @@
 							<span class="path2"></span>
 						</i>
 					</span>
-					<span class="menu-title">Dark</span>
+					<span class="menu-title">Obscuro</span>
 				</a>
 			</div>
 			<!--end::Menu item-->
@@ -863,7 +764,7 @@
 							<span class="path4"></span>
 						</i>
 					</span>
-					<span class="menu-title">System</span>
+					<span class="menu-title">Sistema</span>
 				</a>
 			</div>
 			<!--end::Menu item-->

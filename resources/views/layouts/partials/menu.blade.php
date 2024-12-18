@@ -280,12 +280,14 @@
 					<!--begin::Wrapper-->
 					<div class="d-flex flex-column flex-lg-row flex-lg-stack flex-wrap gap-2 px-4 px-lg-0">
 						<div class="d-flex flex-column flex-lg-row gap-2">
-							<a class="btn btn-sm btn-light-primary fw-bold" href="documentation/base/forms/controls.html">Controls</a>
-							<a class="btn btn-sm btn-light-success fw-bold" href="documentation/base/forms/advanced.html">Advanced</a>
-							<a class="btn btn-sm btn-light-danger fw-bold" href="documentation/base/forms/floating-labels.html">Floating Labels</a>
+							<a class="btn btn-sm btn-light-primary fw-bold" href="#">Opcion 1</a>
+                            <a class="btn btn-sm btn-light-primary fw-bold" href="#">Opcion 2</a>
+                            <a class="btn btn-sm btn-light-primary fw-bold" href="#">Opcion 3</a>
+                            <a class="btn btn-sm btn-light-primary fw-bold" href="#">Opcion 4</a>
+                            <a class="btn btn-sm btn-light-primary fw-bold" href="#">Opcion 5</a>
 						</div>
 						<div class="d-flex flex-column flex-lg-row gap-2">
-							<a class="btn btn-sm btn-light-info fw-bold" href="documentation/forms/autosize.html">More Components</a>
+							<a class="btn btn-sm btn-light-info fw-bold" href="#">Ayuda</a>
 						</div>
 					</div>
 					<!--end::Wrapper-->
@@ -296,12 +298,14 @@
 					<!--begin::Wrapper-->
 					<div class="d-flex flex-column flex-lg-row flex-lg-stack flex-wrap gap-2 px-4 px-lg-0">
 						<div class="d-flex flex-column flex-lg-row gap-2">
-							<a class="btn btn-sm btn-light-primary fw-bold" href="apps/user-management/users/list.html">User Management</a>
-							<a class="btn btn-sm btn-light-success fw-bold" href="apps/inbox/listing.html">Inbox</a>
-							<a class="btn btn-sm btn-light-danger fw-bold" href="apps/file-manager/folders.html">File Manager</a>
+							<a class="btn btn-sm btn-light-secondary fw-bold" href="#">Opcion 1</a>
+                            <a class="btn btn-sm btn-light-secondary fw-bold" href="#">Opcion 2</a>
+                            <a class="btn btn-sm btn-light-secondary fw-bold" href="#">Opcion 3</a>
+                            <a class="btn btn-sm btn-light-secondary fw-bold" href="#">Opcion 4</a>
+                            <a class="btn btn-sm btn-light-secondary fw-bold" href="#">Opcion 5</a>
 						</div>
 						<div class="d-flex flex-column flex-lg-row gap-2">
-							<a class="btn btn-sm btn-light-info fw-bold" href="apps/subscriptions/view.html">More Apps</a>
+							<a class="btn btn-sm btn-light-info fw-bold" href="#">Ayuda</a>
 						</div>
 					</div>
 					<!--end::Wrapper-->
@@ -312,11 +316,14 @@
 					<!--begin::Wrapper-->
 					<div class="d-flex flex-column flex-lg-row flex-lg-stack flex-wrap gap-2 px-4 px-lg-0">
 						<div class="d-flex flex-column flex-lg-row gap-2">
-							<a class="btn btn-sm btn-light-primary fw-bold" href="apps/ecommerce/catalog/products.html">eCommerce</a>
-							<a class="btn btn-sm btn-light-danger fw-bold" href="apps/file-manager/folders.html">File Manager</a>
+							<a class="btn btn-sm btn-light-secondary fw-bold" href="#">Opcion 1</a>
+                            <a class="btn btn-sm btn-light-secondary fw-bold" href="#">Opcion 2</a>
+                            <a class="btn btn-sm btn-light-secondary fw-bold" href="#">Opcion 3</a>
+                            <a class="btn btn-sm btn-light-secondary fw-bold" href="#">Opcion 4</a>
+                            <a class="btn btn-sm btn-light-secondary fw-bold" href="#">Opcion 5</a>
 						</div>
 						<div class="d-flex flex-column flex-lg-row gap-2">
-							<a class="btn btn-sm btn-light-info fw-bold" href="apps/subscriptions/view.html">More Apps</a>
+							<a class="btn btn-sm btn-light-info fw-bold" href="#">Ayuda</a>
 						</div>
 					</div>
 					<!--end::Wrapper-->

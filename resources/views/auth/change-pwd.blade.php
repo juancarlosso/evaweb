@@ -56,6 +56,7 @@ License: For each use you must have a valid license purchased only from above li
         @csrf
 								<!--begin::Heading-->
 								<div class="text-center mb-10">
+                                    <img src='{{asset('assets/media/logos/eva01.png')}}' width='50%' /><br><br>
 									<!--begin::Title-->
 									<h1 class="text-gray-900 fw-bolder mb-3">Nueva Contraseña</h1>
 									<!--end::Title-->
@@ -126,16 +127,16 @@ License: For each use you must have a valid license purchased only from above li
 				</div>
 				<!--end::Body-->
 				<!--begin::Aside-->
-				<div class="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2" style="background-image: url(assets/media/misc/auth-bg.png)">
+				<div class="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2" style="background-image: url(assets/media/auth/bgeva.jpg)">
 					<!--begin::Content-->
 					<div class="d-flex flex-column flex-center py-7 py-lg-15 px-5 px-md-15 w-100">
 						<!--begin::Logo-->
 						<a href="index.html" class="mb-0 mb-lg-12">
-							<img alt="Logo" src="assets/media/logos/custom-1.png" class="h-60px h-lg-75px" />
+							<!-- <img alt="Logo" src="assets/media/logos/custom-1.png" class="h-60px h-lg-75px" /> -->
 						</a>
 						<!--end::Logo-->
 						<!--begin::Image-->
-						<img class="d-none d-lg-block mx-auto w-275px w-md-50 w-xl-500px mb-10 mb-lg-20" src="{{asset('assets/media/misc/taxiciudad01.png')}}" alt="" />
+						<img class="d-none d-lg-block mx-auto w-70 w-md-50  mb-10 mb-lg-20" src="{{asset('assets/media/auth/agency.png')}}" alt="" />
 						<!--end::Image-->
 						<!--begin::Title-->
 						<h1 class="d-none d-lg-block text-white fs-2qx fw-bolder text-center mb-7"></h1>
@@ -155,7 +156,7 @@ License: For each use you must have a valid license purchased only from above li
 			<!--end::Authentication - New password-->
 		</div>
 		<!--end::Root-->
-		
+
 	</body>
 	<!--end::Body-->
 </html>

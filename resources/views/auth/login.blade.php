@@ -60,11 +60,10 @@
         <!--begin::Page bg image-->
         <style>
             body {
-                background-image: url('assets/media/auth/bg10.jpeg');
+                background-image: url('assets/media/auth/bgeva.jpg');
             }
-
             [data-bs-theme="dark"] body {
-                background-image: url('assets/media/auth/bg10-dark.jpeg');
+                background-image: url('assets/media/auth/bgeva.jpg');
             }
         </style>
         <!--end::Page bg image-->
@@ -79,14 +78,14 @@
                     <img class="theme-dark-show mx-auto mw-100 w-150px w-lg-300px mb-10 mb-lg-20" src="assets/media/auth/agency-dark.png" alt="" />
                     <!--end::Image-->
                     <!--begin::Title-->
-                    <h1 class="text-gray-800 fs-2qx fw-bold text-center mb-7">Fast, Efficient and Productive</h1>
+                    <!-- <h1 class="text-gray-800 fs-2qx fw-bold text-center mb-7"><b>E</b>volución, <b>V</b>anguardia y <b>A</b>sistencias</h1> -->
                     <!--end::Title-->
                     <!--begin::Text-->
-                    <div class="text-gray-600 fs-base text-center fw-semibold">In this kind of post,
-                        <a href="#" class="opacity-75-hover text-primary me-1">the blogger</a>introduces a person they’ve interviewed
-                        <br />and provides some background information about
-                        <a href="#" class="opacity-75-hover text-primary me-1">the interviewee</a>and their
-                        <br />work following this is a transcript of the interview.
+                    <div class="text-gray-600 fs-base text-center fw-semibold">Al usar nuestro sistema, aceptas nuestros
+                        <a href="#" class="opacity-75-hover text-primary me-1">términos y condiciones</a>.
+                        <br />Te invitamos también a consultar nuestras
+                        <a href="#" class="opacity-75-hover text-primary me-1">Políticas de Privacidad</a> y si tienes alguna duda<br>
+                        por favor contáctanos a través de nuestro correo <a href='#'>correo@lgo.com</a>
                     </div>
                     <!--end::Text-->
                 </div>
@@ -106,8 +105,9 @@
                                 @csrf
                                 <!--begin::Heading-->
                                 <div class="text-center mb-11">
+                                    <img src='{{asset('assets/media/logos/eva01.png')}}' width='50%' /><br><br>
                                     <!--begin::Title-->
-                                    <h1 class="text-gray-900 fw-bolder mb-3">Acceso al sistema</h1>
+                                    <!-- <h1 class="text-gray-900 fw-bolder mb-3">Acceso al sistema</h1> -->
                                     <!--end::Title-->
                                     <!--begin::Subtitle-->
                                     <div class="text-gray-500 fw-semibold fs-6">Por favor captura tus credenciales</div>
@@ -116,8 +116,6 @@
                                         @include('layouts.alertas')
                                     </p>
                                 </div>
-
-
                                 <!--begin::Input group=-->
                                 <div class="fv-row mb-8">
                                     <!--begin::Email-->
@@ -139,6 +137,7 @@
                                     <!--end::Link-->
                                 </div>
                                 <!--end::Wrapper-->
+
                                 <!--begin::Submit button-->
                                 <div class="d-grid mb-10">
                                     <button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
@@ -152,7 +151,18 @@
                                     </button>
                                 </div>
                                 <!--end::Submit button-->
-                               
+
+                                <!--begin::Submit button-->
+                                <!-- <div class="d-flexx flex-stackx gap-3 fs-base fw-semibold mb-8 text-center"> -->
+                                    <!--begin::Link--><br>
+
+                                    <!--end::Link-->
+                                <!-- </div> -->
+                                <!--end::Submit button-->
+                                <div class="text-center">
+                                <a href="https://allassist.mx" class="link-primary text-center">(c) All Assist</a>
+                                </div>
+
                             </form>
                             <!--end::Form-->
                         </div>
@@ -169,7 +179,7 @@
     <!--end::Root-->
     <!--end::Main-->
     <!--begin::Javascript-->
-    
+
     <!--end::Javascript-->
 </body>
 <!--end::Body-->

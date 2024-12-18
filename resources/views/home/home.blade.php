@@ -9,7 +9,7 @@
         <span class="h-20px border-gray-500 border-start mx-3"></span>
         <!--end::Separator-->
         <!--begin::Description-->
-        <small class="text-gray-500 fs-7 fw-semibold my-1">Bla bla bla</small>
+        <small class="text-gray-500 fs-7 fw-semibold my-1"></small>
         <!--end::Description-->
     </h1>
     <!--end::Title-->
