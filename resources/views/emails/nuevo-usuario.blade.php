@@ -74,7 +74,8 @@ License: For each use you must have a valid license purchased only from above li
 												<!--begin:Text-->
 												<div style="font-size: 14px; font-weight: 500; margin-bottom: 27px; font-family:Arial,Helvetica,sans-serif;">
 													<p style="margin-bottom:9px; color:#181C32; font-size: 22px; font-weight:700">Hola {{ $datos->nombre }},</p>
-													<p style="margin-bottom:2px; color:#7E8299">Aquí tienes los datos de acceso a la plataforma, por seguridad, te recomendamos cambiarlos tan pronto te sea posible.</p>
+													<p style="margin-bottom:2px; color:#7E8299">Aquí tienes los datos de acceso a la plataforma.</p>
+                                                    <p style="margin-bottom:2px; color:#7E8299">Por seguridad, te recomendamos cambiarlos tan pronto te sea posible.</p>
 													<p style="margin-bottom:2px; color:#7E8299"> <strong>Usuario:</strong> {{$datos->usuario}}</p>
 													<p style="margin-bottom:2px; color:#7E8299"> <strong>Password:</strong> {{$datos->password}}</p>
 												</div>
