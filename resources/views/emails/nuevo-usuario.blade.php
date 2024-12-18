@@ -62,7 +62,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--begin:Logo-->
 												<div style="margin-bottom: 10px">
 													<a href="/" rel="noopener" target="_blank">
-														<img alt="Logo" src="{{asset('assets/media/logos/eva01.png')}}" style="height: 35px" />
+														<img alt="Logo" src="{{asset('assets/media/logos/eva01.png')}}" style="height: 75px" />
 													</a>
 												</div>
 												<!--end:Logo-->
