@@ -41,7 +41,7 @@ bgcolor="#f6f6f6">
                         <!-- LOGO -->
                         <tr>
                             <td style="text-align: center">
-                                 <img src="{{ asset('assets/media/logos/eva01.svg') }}" alt="Home"><br>
+                                 <img src="{{ asset('assets/media/logos/eva01.png') }}" alt="Home"><br>
                                 <br/>
                             </td>
                         </tr>

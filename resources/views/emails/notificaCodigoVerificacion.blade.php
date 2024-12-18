@@ -41,7 +41,7 @@ bgcolor="#f6f6f6">
                         <tr>
                             <td style="text-align: center">
                                 <a href="#" style="display: block;margin-bottom: 10px;">
-                                 <img src="{{ asset('assets/media/logos/demo53.svg') }}" style="width: auto; height: 60px;">
+                                 <img src="{{ asset('assets/media/logos/eva01.png') }}" style="width: auto; height: 60px;">
                                  </a>
                                 <br/>
                             </td>
@@ -54,7 +54,7 @@ bgcolor="#f6f6f6">
                                 valign="top">
 
                                 Hola {{ $datos->nombre }}: <br><br>Este es tu codigo de verificación para poder ingresar a tu cuenta.<br><br>
-                            
+
                                     <!-- boton -->
                                     <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
                                         <td class="content-block" itemprop="handler" itemscope
@@ -78,7 +78,7 @@ bgcolor="#f6f6f6">
                             </td>
                         </tr>
 
-                        
+
 
                     </table>
                 </td>
