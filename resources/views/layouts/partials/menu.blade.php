@@ -286,9 +286,6 @@
                             <a class="btn btn-sm btn-light-primary fw-bold" href="#">Opcion 4</a>
                             <a class="btn btn-sm btn-light-primary fw-bold" href="#">Opcion 5</a>
 						</div>
-						<div class="d-flex flex-column flex-lg-row gap-2">
-							<a class="btn btn-sm btn-light-info fw-bold" href="#">Ayuda</a>
-						</div>
 					</div>
 					<!--end::Wrapper-->
 				</div>
@@ -303,9 +300,6 @@
                             <a class="btn btn-sm btn-light-secondary fw-bold" href="#">Opcion 3</a>
                             <a class="btn btn-sm btn-light-secondary fw-bold" href="#">Opcion 4</a>
                             <a class="btn btn-sm btn-light-secondary fw-bold" href="#">Opcion 5</a>
-						</div>
-						<div class="d-flex flex-column flex-lg-row gap-2">
-							<a class="btn btn-sm btn-light-info fw-bold" href="#">Ayuda</a>
 						</div>
 					</div>
 					<!--end::Wrapper-->
@@ -322,9 +316,6 @@
                             <a class="btn btn-sm btn-light-secondary fw-bold" href="#">Opcion 4</a>
                             <a class="btn btn-sm btn-light-secondary fw-bold" href="#">Opcion 5</a>
 						</div>
-						<div class="d-flex flex-column flex-lg-row gap-2">
-							<a class="btn btn-sm btn-light-info fw-bold" href="#">Ayuda</a>
-						</div>
 					</div>
 					<!--end::Wrapper-->
 				</div>
@@ -336,7 +327,6 @@
 						<div class="d-flex flex-column flex-lg-row gap-2">
 							<a class="btn btn-sm btn-light-primary fw-bold" href="https://preview.keenthemes.com/html/metronic/docs">Documentation</a>
 							<a class="btn btn-sm btn-light-success fw-bold" href="documentation/getting-started/video-tutorials.html">Video Tutorials</a>
-							<a class="btn btn-sm btn-light-danger fw-bold" href="https://preview.keenthemes.com/metronic8/demo20/layout-builder.html">Layout Builder</a>
 						</div>
 						<div class="d-flex flex-column flex-lg-row gap-2">
 							<a class="btn btn-sm btn-light-info fw-bold" href="documentation/getting-started/changelog.html">Changelog</a>

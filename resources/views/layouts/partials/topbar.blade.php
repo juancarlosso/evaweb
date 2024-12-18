@@ -580,18 +580,18 @@
 	</div>
 	<!--end::Search-->
 	<!--begin::Activities-->
-	<div class="d-flex align-items-center ms-1">
+	<!-- <div class="d-flex align-items-center ms-1"> -->
 		<!--begin::Drawer toggle-->
-		<div class="btn btn-icon btn-color-white bg-hover-white bg-hover-opacity-10 w-35px h-35px h-md-40px w-md-40px" id="kt_activities_toggle">
+		<!-- <div class="btn btn-icon btn-color-white bg-hover-white bg-hover-opacity-10 w-35px h-35px h-md-40px w-md-40px" id="kt_activities_toggle">
 			<i class="ki-duotone ki-chart-simple fs-1">
 				<span class="path1"></span>
 				<span class="path2"></span>
 				<span class="path3"></span>
 				<span class="path4"></span>
 			</i>
-		</div>
+		</div> -->
 		<!--end::Drawer toggle-->
-	</div>
+	<!-- </div> -->
 	<!--end::Activities-->
 	<!--begin::Chat-->
 	<!-- <div class="d-flex align-items-center ms-1">
@@ -645,7 +645,7 @@
 				<!--end:Item-->
 				<!--begin:Item-->
 				<div class="col-6">
-					<a href="apps/projects/settings.html" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-bottom">
+					<a href="#" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-bottom">
 						<i class="ki-duotone ki-sms fs-3x text-primary mb-2">
 							<span class="path1"></span>
 							<span class="path2"></span>
@@ -657,25 +657,25 @@
 				<!--end:Item-->
 				<!--begin:Item-->
 				<div class="col-6">
-					<a href="apps/projects/list.html" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-end">
+					<a href="#" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-end">
 						<i class="ki-duotone ki-abstract-41 fs-3x text-primary mb-2">
 							<span class="path1"></span>
 							<span class="path2"></span>
 						</i>
-						<span class="fs-5 fw-semibold text-gray-800 mb-0">Projects</span>
+						<span class="fs-5 fw-semibold text-gray-800 mb-0">Siniestros</span>
 						<!-- <span class="fs-7 text-gray-500">Pending Tasks</span> -->
 					</a>
 				</div>
 				<!--end:Item-->
 				<!--begin:Item-->
 				<div class="col-6">
-					<a href="apps/projects/users.html" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light">
+					<a href="#" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light">
 						<i class="ki-duotone ki-briefcase fs-3x text-primary mb-2">
 							<span class="path1"></span>
 							<span class="path2"></span>
 						</i>
-						<span class="fs-5 fw-semibold text-gray-800 mb-0">Customers</span>
-						<span class="fs-7 text-gray-500">Latest cases</span>
+						<span class="fs-5 fw-semibold text-gray-800 mb-0">Clientes</span>
+						<!-- <span class="fs-7 text-gray-500">Latest cases</span> -->
 					</a>
 				</div>
 				<!--end:Item-->
@@ -683,11 +683,11 @@
 			<!--end:Nav-->
 			<!--begin::View more-->
 			<div class="py-2 text-center border-top">
-				<!-- <a href="pages/user-profile/activity.html" class="btn btn-color-gray-600 btn-active-color-primary">View All
+				<a href="#" class="btn btn-color-gray-600 btn-active-color-primary">Configurar
 					<i class="ki-duotone ki-arrow-right fs-5">
 						<span class="path1"></span>
 						<span class="path2"></span>
-					</i></a> -->
+					</i></a>
 			</div>
 			<!--end::View more-->
 		</div>
