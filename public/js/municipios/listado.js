@@ -14,14 +14,14 @@ var KTUsersList = function() {
 		tableRows.forEach(row => {
 			const dateRow = row.querySelectorAll('td');
 
-		  
+
 		});
 
 		// Init datatable --- more info on datatables: https://datatables.net/manual/
 		datatable = $(table).DataTable({
 			"info": false,
 			'order': [],
-			"pageLength": 10,
+			"pageLength": 50,
 			"lengthChange": false,
 		});
 
@@ -40,7 +40,7 @@ var KTUsersList = function() {
 		});
 	}
 
-	
+
 
 
 	// Init toggle toolbar
@@ -121,7 +121,7 @@ var KTUsersList = function() {
 
 	// Toggle toolbars
 	const toggleToolbars = () => {
-		// Select refreshed checkbox DOM elements 
+		// Select refreshed checkbox DOM elements
 		const allCheckboxes = table.querySelectorAll('tbody [type="checkbox"]');
 
 		// Detect checkboxes state & count
@@ -148,7 +148,7 @@ var KTUsersList = function() {
 	}
 
 	return {
-		// Public functions  
+		// Public functions
 		init: function() {
 			if (!table) {
 				return;

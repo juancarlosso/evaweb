@@ -111,7 +111,6 @@
                                                 @foreach($estados as $estado)
                                                 <option value="{{$estado->id}}">{{$estado->nombre}}</option>
                                                 @endforeach
-
                                             </select>
                                             <!--end::Input-->
                                             <!--end::Input-->
@@ -255,7 +254,7 @@
                                     <i class="fa-duotone fa-solid fa-trash fs-2"></i>
                                 </button>
                             </a>
-                           
+
                             <form action="{{ route('municipios.destroy', $municipio->id) }}"
                                 method="post" name="formBorrar{{ $municipio->id }}"
                                 id="formBorrar{{ $municipio->id }}">

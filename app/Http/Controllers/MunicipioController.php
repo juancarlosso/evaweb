@@ -19,7 +19,7 @@ class MunicipioController extends Controller
     */
 	public function index()
 	{
-		$municipios = Municipio::with('estado')->paginate(config('constantes.itemsPorPagina'));
+		$municipios = Municipio::with('estado')->get(); // );paginate(config('constantes.itemsPorPagina'));
 		$estados=Estado::all();
 		return view('municipios.index',compact('estados'))->with('municipios', $municipios);
 	}
@@ -94,7 +94,7 @@ class MunicipioController extends Controller
 		$municipio = Municipio::findOrFail($id);
 		$municipio->update($request->all());
 		$municipio->save();
-		
+
 
 		return redirect()->route('municipios.index')->with('success', 'El Municipio ha sido actualizado');
 	}

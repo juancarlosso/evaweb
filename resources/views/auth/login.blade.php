@@ -85,7 +85,7 @@
                         <a href="#" class="opacity-75-hover text-primary me-1">términos y condiciones</a>.
                         <br />Te invitamos también a consultar nuestras
                         <a href="#" class="opacity-75-hover text-primary me-1">Políticas de Privacidad</a> y si tienes alguna duda<br>
-                        por favor contáctanos a través de nuestro correo <a href='#'>correo@lgo.com</a>
+                        por favor contáctanos a través de nuestro correo <a href='mailto:informes@allassist.mx'>informes@allassist.mx</a>
                     </div>
                     <!--end::Text-->
                 </div>

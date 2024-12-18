@@ -41,7 +41,7 @@ bgcolor="#f6f6f6">
                         <!-- LOGO -->
                         <tr>
                             <td style="text-align: center">
-                                 <img src="{{ asset('assets/media/logos/demo53.svg') }}" alt="Home"><br>
+                                 <img src="{{ asset('assets/media/logos/eva01.svg') }}" alt="Home"><br>
                                 <br/>
                             </td>
                         </tr>
@@ -53,7 +53,7 @@ bgcolor="#f6f6f6">
                                 valign="top">
 
                                 Hola {{ $boleto->nombre_cliente }}: <br><br>
-                                Tu recolección ha sigo agendada para el dia 
+                                Tu recolección ha sigo agendada para el dia
                             </td>
                         </tr>
                         <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
@@ -76,7 +76,7 @@ bgcolor="#f6f6f6">
                             </td>
                         </tr>
                         <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
-                         
+
                             <td class="content-block"
                                 style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;"
                                 valign="top">
@@ -87,7 +87,7 @@ bgcolor="#f6f6f6">
                             <td class="content-block"
                                 style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;"
                                 valign="top">
-                                <span style="font-weight: 600;">Costo boleto:</span> ${{number_format($boleto->precio_mx, 2)}} MXN 
+                                <span style="font-weight: 600;">Costo boleto:</span> ${{number_format($boleto->precio_mx, 2)}} MXN
                             </td>
 
                         </tr>
